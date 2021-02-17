@@ -1,5 +1,5 @@
 import random
-
+from selenium.webdriver.common.by import By
 
 """
 1.service frame
@@ -8,7 +8,8 @@ import random
 4.assertions
 """
 #1
-TEXT_FORM = (By.XPATH, "//div[@id='app']/div/div/div/div/div/div/div[3]/div/div/div/div/input")
+TEXT_FORM = (By.XPATH, "//div[@id='app']/div/div/div/div/div/div/"
+                       "div[3]/div/div/div/div/input")
 
 #Random number method added to Text Form locator in the case that the first feature listed is NOT a form
 TEXT_FORM_VAR = (By.XPATH, "//div[@id='app']/div/div/div/div/div/div/div[3]/div/div[{n}]/div/div/input".format(n=random.randint(2, 10)))
